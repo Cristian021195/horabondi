@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <clipPath id="clip-tesa">
+      <rect width="800" height="800"/>
+    </clipPath>
+  </defs>
+  <g id="tesa" clip-path="url(#clip-tesa)">
+    <path id="Trazado_1" data-name="Trazado 1" d="M209.592,0V-506.475H11.67V-687.592H628.309v181.117H430.387V0Z" transform="translate(80 744)"/>
+  </g>
+</svg>

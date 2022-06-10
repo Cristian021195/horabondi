@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <filter id="Línea_1" x="204.5" y="204.295" width="205" height="84" filterUnits="userSpaceOnUse">
+      <feOffset dx="-20" dy="-20" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Línea_2" x="193.483" y="45.483" width="181.034" height="253.829" filterUnits="userSpaceOnUse">
+      <feOffset dx="-20" dy="-20" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-_512px">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="_512px" data-name="512px" clip-path="url(#clip-_512px)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(1)" fill="#28bf28" stroke="#f3f3f3" stroke-width="32">
+      <circle cx="256" cy="256" r="256" stroke="none"/>
+      <circle cx="256" cy="256" r="240" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Línea_1)">
+      <line id="Línea_1-2" data-name="Línea 1" x2="121" transform="translate(256.5 256.3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="64"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Línea_2)">
+      <line id="Línea_2-2" data-name="Línea 2" x1="75" y2="147.795" transform="translate(256.5 108.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="64"/>
+    </g>
+  </g>
+</svg>
