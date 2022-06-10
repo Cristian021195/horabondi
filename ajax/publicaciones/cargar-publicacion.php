@@ -16,7 +16,7 @@ $body = array(
 $headers = array(
         'method'  => 'POST',
         'header'  => "Content-Type: application/x-www-form-urlencoded\r\n" .
-                    "Authorization: Basic ODUyNDExNjQtY2JhNS00NWZkLTgyMzEtYWQyNTBhOWFiODA2\r\n",
+                    "Authorization: Basic ODUyNDExNjQtY2JhNS00NWZkLTgyMzEtYWQyNTBhOWFiODB3\r\n",
         'content' => $body
 );
 if(!empty($_POST['publicacion'])){
@@ -41,14 +41,6 @@ if(!empty($_POST['publicacion'])){
             }else{
                 echo json_encode(array("error"=>true));
             }
-            /*
-            
-            {
-                "error":false,
-                "id":0,
-                "key_publicaciones":"$2y$10$Hnr0Fa6s0Se929yt1CZc1ecwBubhrikfnmn3yPo\/0Kn.syt1Dr4fK"
-            }
-            */
         }else{//publicacion a editar
             echo json_encode($publicacion->update());
             sendMessage($publicacion->publicacion, $publicacion->empresa, $publicacion->id);
@@ -63,14 +55,10 @@ if(!empty($_POST['publicacion'])){
 }
 
 
-/*
-
-{
+/*{
 "contents": {"en": "Hello World!"} ,
 "included_segments" : ["All"],
 "app_id": "9f895016-5666-4216-a052-13abc5bb0b18"
 }
-
-
 */
 ?>
