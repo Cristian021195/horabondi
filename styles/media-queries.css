@@ -1,0 +1,45 @@
+@media screen and (max-width: 575px){
+    #empresa-navbar ul{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 150%;
+    }
+    h1{
+        text-align: left!important;
+        margin-left: 0.2em;
+    }
+    .titular-seccion{
+      line-height: 0.7em;
+      display: block;
+    }
+    .titular-seccion-2{
+      margin-left: 1em;
+    }
+    a svg{
+      margin:0px 5px 4px 0px;
+    }
+    .no-strech{
+      padding: 0;
+    }
+    .no-strech > div{
+      padding: 0;
+    }
+    .no-strech form, .no-strech .scroll-all{
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    .no-strech form{
+      margin-top: 1em;
+    }
+    .no-strech h1{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 767px) and (min-width: 576px) {
+  }
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+  }  
+  @media screen and (max-width: 1200px) and (min-width: 992px) {
+  }

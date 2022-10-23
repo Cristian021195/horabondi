@@ -1,0 +1,59 @@
+{
+    "theme_color": "#00838F",
+    "background_color": "#00838F",
+    "orientation":"any",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "HoraBondi",
+    "short_name": "HoraBondi",
+    "description": "App para colectivos de Tucum\u00e1n",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots":[
+        {
+            "src": "/screenshots/screenshot_1.webp",
+            "sizes": "720x1280",
+            "type": "image/webp",
+            "label": "Consultar por los precios actuales de cada viaje"
+        },
+        {
+            "src": "/screenshots/screenshot_2.webp",
+            "sizes": "720x1280",
+            "type": "image/webp",
+            "label": "Accseso rápido a cada sección"
+        },
+        {
+            "src": "/screenshots/screenshot_3.webp",
+            "sizes": "720x1280",
+            "type": "image/webp",
+            "label": "¿A que hora tengo colectivo?"
+        },
+        {
+            "src": "/screenshots/screenshot_4.webp",
+            "sizes": "720x1280",
+            "type": "image/webp",
+            "label": "Buscar la empresa con la que más frecuento"
+        }
+    ]
+}

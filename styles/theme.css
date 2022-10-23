@@ -1,0 +1,119 @@
+/* THEME CUSTOM DARK */
+[data-theme='dark'] body, [data-theme='dark'] main{
+  background-color: #181818;
+}
+[data-theme='dark'] h1, [data-theme='dark'] h2, [data-theme='dark'] h3, [data-theme='dark'] h4, [data-theme='dark'] h5, [data-theme='dark'] h6, [data-theme='dark'] small, [data-theme='dark'] i, [data-theme='dark'] p, [data-theme='dark'] label, [data-theme='dark'] li, [data-theme='dark'] a, [data-theme='dark'] b{
+  color: whitesmoke;
+}
+[data-theme='dark'] table thead, [data-theme='dark'] table tbody{
+  background-color: var(--cyan-8);
+}
+[data-theme='dark'] .stripped tr:nth-child(even), [data-theme='dark'] .empresa-form{
+  background-color: var(--cyan-9);
+}
+[data-theme='dark'] table tbody tr:hover{
+  background-color: var(--cyan-6)!important;
+  z-index: 100;
+}
+[data-theme='dark'] table tbody td:hover, [data-theme='light'] table tbody td:hover{
+  background-color: var(--cyan-5);
+  color: var(--grey-0);
+  font-weight: bold;
+}
+[data-theme='dark'] table{
+  color:var(--grey-2)
+}
+[data-theme='dark'] input[type="time"]{
+  background-color: var(--grey-8);
+}
+[data-theme='dark'] .form, [data-theme='dark'] form{
+  background-color: #141414;
+}
+[data-theme='dark'] .sky-bg{
+  background-image: url("/svg/night-sky.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-theme='dark'] .favorito{
+  background-color: #141414;
+}
+[data-theme='dark'] .b-shadow {
+  border-radius: 1em;
+  border: 5px solid #242424;
+}
+[data-theme='dark'] .i-shadow {
+  border-radius: 1em;
+  border: 5px solid #242424;
+}
+
+
+/*THEME LIGHT*/
+[data-theme='light'] #main{
+  background-color: #fcfcfc;
+}
+[data-theme='light'] .b-shadow {
+  border-radius: 1em;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, .25), -6px -6px 8px 0 hsla(0, 0%, 100%, .3);
+  background-color: #fff;
+}
+[data-theme='light'] .i-shadow {
+  border-radius: 1em;
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, .25), -3px -3px 4px 0 hsla(0, 0%, 100%, .3);
+  background-color: #fff;
+}
+[data-theme='light'] .s-shadow {
+  height: 2em;
+  border:none;
+  border-radius: 0.3em;
+  width: 50%;
+  border: solid 1px var(--grey-3);
+  margin-left: 1em;
+  background-color: #fff;
+}
+[data-theme='light'] .card{
+  border-radius: 1em;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, .25), -6px -6px 8px 0 hsla(0, 0%, 100%, .3)
+}
+[data-theme='light'] input[type="time"]{
+  background-color: white;
+}
+[data-theme='light'] .sky-bg{
+  background-image: url("/svg/day-sky.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sidebar .active, #menu-top .active{
+  background-color: var(--grey-0);
+  color: var(--bg-dark);
+}
+[data-theme='light'] footer small , [data-theme='light'] .btn, [data-theme='light'] a{
+  color: whitesmoke;
+}
+[data-theme='light'] .empresa-form{
+  background-color: var(--cyan-0);
+}
+
+[data-theme='light'] .stripped tr:nth-child(even){
+  background-color: var(--grey-1);
+}
+[data-theme='light'] .sticky-header thead{
+  position: sticky;
+  top:0;
+  background-color: var(--grey-1);
+  opacity: none;
+  z-index: -1;
+}
+[data-theme='light'] .sticky-header tbody{
+  position: relative;
+  z-index: -2;
+}
+[data-theme='light'] table tbody tr:hover{
+  background-color: var(--cyan-0);
+}
+[data-theme='light'] select{
+  background-color: var(--grey-0);
+}
+[data-theme='light'] article li a, [data-theme='light'] small a, [data-theme='light'] p a{
+  color: var(--blue-8);
+}

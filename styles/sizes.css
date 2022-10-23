@@ -1,0 +1,64 @@
+/*FONT SIZES*/
+.fs1{
+    font-size: 1.5em;
+  }
+  .fs2{
+    font-size: 2em;
+  }
+  .fs3{
+    font-size: 3em;
+  }
+  .fs4{
+    font-size: 4em;
+  }
+  .fs5{
+    font-size: 5em;
+  }
+  .fs6{
+    font-size: 6em;
+  }
+  .fs7{
+    font-size: 7em;
+  }
+  .fs8{
+    font-size: 8em;
+  }
+  .fs9{
+    font-size: 9em;
+  }
+  .fs10{
+    font-size: 10em;
+  }
+
+.small h1{/*,.small h2,.small h3,.small h4,.small h5,.small h6*/
+  font-size: 185%;
+}
+.small p, .small li, .small a, .small small, .small label, .small select{
+  font-size: 85%; 
+}
+.large h1{/*.large h2,.large h3,.large h4,.large h5,.large h6*/
+  font-size: 225%;
+}
+.large p, .large li, .large a, .large small, .large label, .large select{
+  font-size: 105%; 
+}
+
+
+.br-0{
+  border-radius: 0.25em;
+}
+.br-1{
+  border-radius: 0.5em;
+}
+.br-2{
+  border-radius: 1em;
+}
+.br-3{
+  border-radius: 1.5em;
+}
+.br-4{
+  border-radius: 2em;
+}
+.br-50{
+  border-radius: 50%;
+}

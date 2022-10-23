@@ -1,26 +1,137 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import './colors.css';
+@import './animaciones.css';
+@import './default.css';
+@import './bootstrap-grid.css';
+@import './media-queries.css';
+@import './sizes.css';
+@import './scroll.css';
+@import './theme.css';
+
+
+/* ESPECIFICOS ID*/
+#sidebar .active, #menu-top .active{
+  border-radius: 0.2em;
+  padding: 0.2em 0.6em;
+  transition: all 0.15s;
+}
+#menu-top ul li{
+  margin-right: 0.5em;
+}
+#sidebar{
+  position: absolute;
+  font-size: 1.2em;
+}
+#sidebar li a{
+  padding: 0.3em 0em;
+}
+#empresa-navbar{
+  overflow-x: scroll;
+}
+#empresa-navbar ul li{
+  margin: 0.4em;
+}
+#empresa-navbar .active{
+  border-bottom: 0.3em solid var(--grey-0);
+}
+.card h2 a{
+  color: whitesmoke;
+  text-decoration: underline;
+}
+/*ESPECIFICOS CLASES*/
+.bubble{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1.3em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+.v-align-middle{
+  display: inline-block;
+  vertical-align: top;
+  line-height: normal;
+  padding-bottom: 6px;
+}
+.titular-seccion{
+  display: flex;
+  justify-content: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.drag-active{
+  border-radius: 0.5em;
+}
+.dashed{
+  border: dashed var(--bg-blue) 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--bg-light-blue);
+}
+.drag-area{
+  cursor: pointer;
+}
+.drag-title{
+  text-align: center;
+  background-color: var(--bg-white);
+}
+.h-100{
+  height: 5em;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.label-file{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  border-radius: 0.2em;
+  font-weight: bold;
+}
+.btn:active{
+  transform: scale(1.05);
+  box-shadow: inset 0 0 0 0.2em rgba(255,255,255,0.3);
+}
+.Google{
+  background-color: var(--red-2);
+}
+.Facebook{
+  background-color: var(--blue-4);
+}
+.card{
+  border-radius: 1em;
+  min-height: 10em;
+  min-width: 10em;
+  text-align: center;
 }
 
-* {
-  box-sizing: border-box;
+.list-square li{
+  list-style: square;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.list-circle li{
+  list-style: disc;
+}
+.bottom-bus{
+  width: 4em;
+}
+.bottom-bus img{
+  width: 5em;
+}
+.bus{
+  position: relative;
+  bottom: 0;
+  z-index: 2;
+}
+.origen, .destino{
+  position: relative;
+  width: 8em;
+  z-index: 0;
+}
+.outlined{
+  outline: 1px solid red;
+}
+.text-underline{
+  text-decoration: underline;
 }

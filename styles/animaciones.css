@@ -1,0 +1,288 @@
+/* ANIMACIONES - CSS*/
+.skeleton-blink{
+    animation-name: skeletonBlink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes skeletonBlink{
+  0%{
+    background-color:rgba(255, 255, 255, 0.5);
+  }
+  50%{
+    background-color:rgba(0, 0, 0, 0.1);
+  }
+  100%{
+    background-color:rgba(255, 255, 255, 0.5);
+  }
+}
+
+.minimize-v{
+    display: none;
+  }
+  
+  @keyframes minimizeV{
+    0%{
+      height: auto;
+      opacity: 1;
+    }
+    100%{
+      display: none;
+      height: 0px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideUpRemove{
+    from{
+        transform: translateY(0%);
+        opacity: 1;
+  
+    }to{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+  }
+  .out{
+    animation: slideUpRemove;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideDownIn{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }to{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .in{
+    animation: slideDownIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  .right-to-left{
+    transform: translate(-100%,0);
+    transition: 0.3s ease-in-out;
+  }
+  .left-to-right{
+    transform: translate(0,0);
+    transition: 0.3s ease-in-out;
+  }
+  .rotate-right{
+    transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
+  }
+  .rotate-left{
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .blur{
+    filter: blur(1px);
+    transition: all 0.3s;
+  }
+  
+  .blur-in-animation{
+    animation: blurIn 0.3s ease;
+  }
+  @keyframes blurIn{
+    0% {
+      filter: blur(0);
+    }
+    100% {
+      filter: blur(1px);
+    }
+  }
+  
+  .blur-out-animation{
+    animation: blurOut ease 1s;
+  }
+  @keyframes blurOut{
+    0% {
+      filter: blur(1px);
+    }
+    100% {
+      filter: blur(0);;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease .4s;
+    -moz-animation: fadeIn ease .4s;
+    -o-animation: fadeIn ease .4s;
+    -ms-animation: fadeIn ease .4s;
+  }
+  
+  .pop-up {
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-duration: 0.3s;
+  }
+  
+  @keyframes animate-pop {
+    0% {
+      transform: scale(0.9, 0.9);
+    }
+  
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @keyframes fadeIn{
+    0% {
+      background-color: rgba(0, 0, 0, 1);
+    }
+    100% {
+      background-color: var(--bg-dark);
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  .fade-out {
+    animation: fadeOut ease .4s;
+    -webkit-animation: fadeOut ease .4s;
+    -moz-animation: fadeOut ease .4s;
+    -o-animation: fadeOut ease .4s;
+    -ms-animation: fadeOut ease .4s;
+  }
+  @keyframes fadeOut{
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  .shake{
+    animation-name: shake;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0%{
+      transform: translate(0.2em, 0)
+    }
+    50%{
+      transform: translate(-0.2em, 0)
+    }
+    100%{
+      transform: translate(0.2em, 0)
+    }
+  }
+  
+  .horizontal-movement{
+    animation-name: horizontalMovement;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes horizontalMovement {
+    0%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+  }
+  
+  .pulse{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;    
+    text-align: center;
+    box-shadow: 25 25 25 var(--bg-white);
+    animation: pulseEffect 2s infinite;
+  }
+  @keyframes pulseEffect {
+    0% {
+      -moz-box-shadow: 0 0 0 0 var(--grey-0);
+      box-shadow: 0 0 0 0 var(--grey-0);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="762" height="728.119" viewBox="0 0 762 728.119">
+  <g id="destino" transform="translate(5)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(205.672)" fill="#ffd039" stroke="#707070" stroke-width="10">
+      <ellipse cx="143.775" cy="143.775" rx="143.775" ry="143.775" stroke="none"/>
+      <ellipse cx="143.775" cy="143.775" rx="138.775" ry="138.775" fill="none"/>
+    </g>
+    <rect id="Rectángulo_1" data-name="Rectángulo 1" width="139.389" height="607.268" transform="translate(172.53 115.02)" fill="#dedede"/>
+    <rect id="Rectángulo_3" data-name="Rectángulo 3" width="131.591" height="418.167" transform="translate(270.98 304.121)" fill="#c5c5c5"/>
+    <rect id="Rectángulo_2" data-name="Rectángulo 2" width="180.328" height="485.424" transform="translate(517.591 238.813)" fill="#efefef"/>
+    <rect id="Rectángulo_7" data-name="Rectángulo 7" width="278.778" height="122.818" transform="translate(361.631 599.47)" fill="#bca2a2"/>
+    <rect id="Rectángulo_6" data-name="Rectángulo 6" width="90.652" height="369.429" transform="translate(81.879 352.859)" fill="#bca2a2"/>
+    <rect id="Rectángulo_5" data-name="Rectángulo 5" width="49.712" height="49.712" transform="translate(582.899 98.449)" fill="#b1b1b1"/>
+    <rect id="Rectángulo_4" data-name="Rectángulo 4" width="114.045" height="89.677" transform="translate(550.732 148.162)" fill="#c5c5c5"/>
+    <path id="Trazado_12" data-name="Trazado 12" d="M296,932.171h82.128s-2.782-369.129,0-369.574,90.34,0,90.34,0-2.793-234.8,0-238.17,137.338-3.1,139.617,0c1.949,2.65-.6,177.355,0,188.894-37.052.9-41.238-.318-41.064,0,1.2,2.193,129.246-2.912,131.4,0s0,295.66,0,295.66-36.911-.314-41.064,2.31,0,120.881,0,120.881H936.6s2.242-115.719,0-120.285S813.4,808.979,813.4,808.979s-2.672-361.213,0-361.362,32.851,0,32.851,0-3.636-90.561,0-90.34,32.851,0,32.851,0-1.623-49.333,0-49.277,48.2-.07,49.277,0,0,49.277,0,49.277,30.915-.055,32.851,0,0,90.34,0,90.34,28.2-.148,32.851,0,0,484.553,0,484.553H378.128" transform="translate(-296 -209.447)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    <path id="Trazado_13" data-name="Trazado 13" d="M688,796H802.979" transform="translate(-285.574 -196.468)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_14" data-name="Trazado 14" d="M832,444.02c5.844-1.737,114.979,0,114.979,0" transform="translate(-281.745 -205.85)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_15" data-name="Trazado 15" d="M864,356h49.277" transform="translate(-280.894 -208.17)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_16" data-name="Trazado 16" d="M888,308.638V284" transform="translate(-280.255 -210.085)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_17" data-name="Trazado 17" d="M464,556V925.575" transform="translate(-291.532 -202.851)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_18" data-name="Trazado 18" d="M512,356V898.043" transform="translate(-290.255 -208.17)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_19" data-name="Trazado 19" d="M555,356l5.133,574.894" transform="translate(-289.112 -208.17)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_20" data-name="Trazado 20" d="M600,540V901.362" transform="translate(-287.915 -203.277)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_21" data-name="Trazado 21" d="M648,540V761.745" transform="translate(-290.745 -203.277)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_22" data-name="Trazado 22" d="M844,540V819.234" transform="translate(-266.027 -260.766)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_23" data-name="Trazado 23" d="M844,540V819.234" transform="translate(-208.537 -260.766)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_24" data-name="Trazado 24" d="M888,284v32.851" transform="translate(-300.787 -105.372)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_25" data-name="Trazado 25" d="M888,284v32.851" transform="translate(-261.777 -105.372)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_32" data-name="Trazado 32" d="M864,836h205.319" transform="translate(-469.787 -195.404)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <path id="Trazado_33" data-name="Trazado 33" d="M864,876h205.319" transform="translate(-469.787 -194.34)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <ellipse id="Elipse_2" data-name="Elipse 2" cx="32.654" cy="33.141" rx="32.654" ry="33.141" transform="translate(328.49 24.369)" fill="#ffb639"/>
+    <ellipse id="Elipse_3" data-name="Elipse 3" cx="40.939" cy="40.939" rx="40.939" ry="40.939" transform="translate(386 115.02)" fill="#ffb639"/>
+    <line id="Línea_1" data-name="Línea 1" x2="52" transform="translate(82 415.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_2" data-name="Línea 2" x2="52" transform="translate(82 464.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_3" data-name="Línea 3" x2="52" transform="translate(82 513.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_4" data-name="Línea 4" x2="52" transform="translate(82 562.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_5" data-name="Línea 5" x2="52" transform="translate(82 613.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_6" data-name="Línea 6" x2="52" transform="translate(82 662.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+    <line id="Línea_7" data-name="Línea 7" x2="56" transform="translate(696 723.119)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10"/>
+  </g>
+</svg>

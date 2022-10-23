@@ -1,0 +1,77 @@
+/*ESPECIFICOS HTML*/
+main,
+nav,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans', Ubuntu,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  user-select: text!important;
+}
+* {
+  box-sizing: border-box;
+}
+hr{
+  border: 1px solid var(--grey-4);
+}
+input{
+  all: unset;
+}
+input[type="submit"] , input[type="reset"]{
+  cursor: pointer;
+}
+input[type="file"]::-webkit-file-upload-button{
+  display: none;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  text-align: center;
+}
+button{
+  all: unset;
+  cursor: pointer;
+  border: none;  
+}
+blockquote{
+  transition: 0.4s all;
+  border-radius: 0.5em;
+}
+ul {
+  list-style: none;
+}
+main {
+  position: relative;
+  min-height: calc(100vh);
+}
+table{
+  position: relative;
+}
+body {
+  user-select: none; /* standard */
+  -moz-user-select: none; /* firefox specific */
+  -webkit-user-select: none; /* Chrome, Opera and Safari*/
+  -ms-user-select: none; /* IE, ms-edge */
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+  }
+  table tr td, table tr th{
+    padding: 0.4em 0.6em;
+  }
+  h1::first-letter{
+    text-transform: uppercase;
+    color:var(--cyan-8);
+    font-size: 1.2em;
+  }
+
+  a svg{
+    vertical-align: middle;
+  }
+
+  button, input[type="submit"], input[type="reset"]{
+    color: var(--bg-whitesmoke);
+  }
