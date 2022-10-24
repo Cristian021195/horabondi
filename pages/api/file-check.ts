@@ -8,3 +8,4 @@ export default function handler(req: NextApiRequest,  res: NextApiResponse<any>)
     let exist = existsSync(process.cwd()+DIRECTORIES.JSON_DIR_HORARIOS+'exprebus-38-sabados-ns.json');
     res.status(200).json({ name: ''+process.cwd(), new_name: ''+__dirname, test_bool:  exist+"(JSON_DIR_HORARIOS+'exprebus-38-sabados-ns.json')"});
 }
+ 
