@@ -8,8 +8,8 @@ export const createTransporter = ()=>{
         auth: {
             //user: process.env.MAILER_SECRET_USER,
             //pass: process.env.MAILER_SECRET_KEY
-            user:'cristiangramajo015@gmail.com',
-            pass:'pnjciltixjfknfse'
+            user:process.env.MAILER_SECRECT_USER,
+            pass:process.env.MAILER_SECRECT_KEY
         }
     })
 
