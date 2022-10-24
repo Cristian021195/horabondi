@@ -17,3 +17,4 @@ export const DATA_DIRECTORIES_ARR = [
     "\\data\\json\\horarios\\",
     "\\data\\json\\precios\\",
 ]// cwd() --> D:\\PRACTICAS WEB\\PROYECTOS\\horabondi
+// JSON_DIR_HORARIOS+'exprebus-38-sabados-ns.json'
