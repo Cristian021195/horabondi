@@ -1,5 +1,5 @@
 /* SCROLL */
-.h-scroll-style::-webkit-scrollbar {
+  .h-scroll-style::-webkit-scrollbar {
     width: 7px;
     height: 7px;
   }
@@ -12,8 +12,8 @@
     border-radius: 31px;
   }  
   .body-scroll::-webkit-scrollbar {
-    width: 0.8em;
-    height: 0.8em;
+    width: 0.6em;
+    height: 0.6em;
   }
   .body-scroll::-webkit-scrollbar-thumb {
     background: var(--teal-2);

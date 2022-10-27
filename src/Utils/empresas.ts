@@ -11,7 +11,7 @@ export const empresas: IEmpresaItem[] = [
         nombre:"exprebus",
         precios:true,
         img:'/svg/exprebus-full.svg',
-        color:'--orange-3',
+        color:'--yellow-8',
         descripcion:'Actualmente la empresa más usada en la provincia, tiene mayores recorridos y suele ser la más barata en pasajes y abonos mensuales. No reciben débito en terminal.',
         informacion: {
             direccion:"Terminal Tucumán, Av. Brígido Terán 250 Boleteria 63-64, T4000 San Miguel de Tucumán, Tucumán, Argentina.",

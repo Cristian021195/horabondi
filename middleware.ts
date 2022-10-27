@@ -22,7 +22,7 @@ export default async function middleware(req:NextRequest){
 }
 
 export const config = {//http://localhost:3000/empresas/exprebus/horarios
-    matcher: ['/admin', '/uploads/:path*'],
+    matcher: ['/admin/:path*', '/uploads/:path*'],
 }
 
 

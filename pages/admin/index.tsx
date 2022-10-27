@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import { FormEvent } from 'react';
-import { LayoutPrincipal } from '../src/Layouts';
-import { ISSERVER, compartir } from '../src/Utils';
-import {AltaEmpresaForm, AltaUsuarioForm, PublicacionesForm, CrudPublicaciones} from "../src/Components/Forms"
+import { LayoutPrincipal } from '../../src/Layouts';
+import { ISSERVER, compartir } from '../../src/Utils';
+import {AltaEmpresaForm, AltaUsuarioForm, PublicacionesForm, CrudPublicaciones} from "../../src/Components/Forms"
 
 const Admin: NextPage = () => {
 

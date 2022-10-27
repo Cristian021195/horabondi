@@ -72,9 +72,9 @@ const Login: NextPage = () => {
                 <p>Inicio de sesión por defecto:</p>
                 <form className='row text-start' onSubmit={(e)=>{submitHandler(e)}}>
                     <label htmlFor='email' className='d-flex justify-content-center'>Email: </label>
-                    <input type="email" name="email" id="email" className='bb-1 p-2 mb-4'/>
+                    <input type="email" name="email" id="email" className='bb-1 p-2 mb-4 br-0'/>
                     <label htmlFor='contra' className='d-flex justify-content-center'>Contraseña: </label>
-                    <input type="password" name="contra" id="contra" className='bb-1 p-2 mb-4'/>
+                    <input type="password" name="contra" id="contra" className='bb-1 p-2 mb-4 br-0'/>
                     <button type='submit' className='col text-center btn p-2 bg-blue-3 m-2'>Ingresar</button>
                 </form>
             </div> 

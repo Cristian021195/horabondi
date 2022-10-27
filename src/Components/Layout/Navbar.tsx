@@ -47,7 +47,7 @@ export const Navbar = ({menu_opts}:IMenuOpts) => {
         </aside>      
         <button type='button'
             className={menuToggle ? `z-i-8 bubble d-sm-none rotate-right bg-yellow-8` : `z-i-8 bubble d-sm-none rotate-left bg-yellow-8`} onClick={()=>{setMenuToggle(!menuToggle)}}>
-            <span className='v-align-middle' style={{transform:'rotate(270deg)'}}>▲</span>
+            <span className='v-align-middle' style={{transform:'rotate(270deg)',color:'whitesmoke'}}>▲</span>
         </button>
         </>
     )

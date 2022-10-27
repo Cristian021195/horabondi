@@ -84,7 +84,7 @@ export default async function excel(req: any, res: any){
                   fs.writeFileSync(new_json_filepath+json_file, JSON.stringify(armarTablaHorarioJSON(dataExcel, sheet)))
 
                   //DESCOMENTAR LINEA MAS ADELANTE
-                  /*pool.query("UPDATE llaves SET llave = ? WHERE archivo = ?", [uuidv4(), name_file]).then((data:any)=>{
+                  pool.query("UPDATE llaves SET llave = ? WHERE archivo = ?", [uuidv4(), name_file]).then((data:any)=>{
                     if(data[0].affectedRows > 1){
                       console.log('Se editaron las llaves correctamente')
                     }else{
@@ -96,7 +96,7 @@ export default async function excel(req: any, res: any){
                         }
                       })                      
                     }
-                  })*/
+                  })
 
               } catch (error) {
                   console.log("ERROR AL RENOMBRAR / CREAR JSON",error)

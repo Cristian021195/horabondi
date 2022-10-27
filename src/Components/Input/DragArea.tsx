@@ -67,7 +67,7 @@ export function DragArea({acceptType, url}:IAcceptType) {
                     <input className="drag-area dashed h-100" name="archivo" id="archivo" type="file" accept={acceptType} multiple onChange={(e) => {changeImage(e);}}/>
                   </div>
                   <div className="d-flex justify-content-between">
-                      <input type="submit" className={`btn ${disabled ? 'bg-grey-4' : 'bg-blue-3'} p-2 mt-4`} disabled={disabled} value="Subir Archivos"/>
+                      <input type="submit" className={`btn p-2 mt-4 ${disabled ? 'bg-grey-4' : 'bg-blue-3'}`} disabled={disabled} value="Subir Archivos"/>
                       <input type="reset" value="Limpiar" className="btn bg-red-2 p-2 mt-4" onClick={()=>{setFileName(["Subir 📂"]); setDisabled(true)}}/>
                   </div>
 

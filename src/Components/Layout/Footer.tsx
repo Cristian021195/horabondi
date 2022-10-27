@@ -7,8 +7,7 @@ export const Footer = () => {
         window.addEventListener('beforeinstallprompt', (event) => {
             /* el evento es de tipo beforeinstallprompt cuyo prototipo tiene el evento propmt que dispara el navegador install, 
             y tambien un metodo asincrono para ver el estado de la eleccion del usuario luego de disparar el prompt viendo si acepto o declino
-            con la respuesta outcome*/
-            //console.log(event)
+            con la respuesta outcome */
             setBip(event)
         });
   },[])
@@ -23,8 +22,9 @@ export const Footer = () => {
               <Link href="/preguntas-frecuentes"><a style={{color:'whitesmoke', textDecoration:'underline'}}>Preguntas Frecuentes</a></Link>
             </div>
             <div className='col-12 col-lg-4 d-flex justify-content-end'>
-              <div>
-                {bip !== undefined ? <button
+            </div>
+            <div className='col-12 col-lg-4 mt-2' style={{textAlign:'left'}}>
+              <small>{bip !== undefined ? <button
                   onClick={async ()=>{
                       if(bip) bip.prompt();
                       const biip = await bip?.userChoice;
@@ -33,10 +33,8 @@ export const Footer = () => {
                       }
                   }}
                 className='btn p-1 bg-blue-3'>Instalar</button> : <></> }
-              </div>
-            </div>
-            <div className='col-12 col-lg-4 mt-2'>
-              <small>© 2022 Cristian Ismael Gramajo - todos los derechos reservados.</small>
+                &nbsp;&nbsp;© 2022 Cristian Ismael Gramajo - todos los derechos reservados.
+              </small>
             </div>
         </div>
     </footer>

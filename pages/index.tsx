@@ -5,20 +5,10 @@ import { AccesoRapido } from '../src/Components/UI'
 import { useGlobalConfig } from '../src/Hooks'
 import { LayoutPrincipal } from '../src/Layouts'
 import { getLocalStorage } from '../src/Utils'
-/*
-
-          {_favoritos.length > 0 ? <>
-            <h2>ACCSESO RAPIDO ★</h2>
-            {
-              _favoritos?.map((fav:string, fav_i:number)=><AccesoRapido key={fav_i} empresa={fav}/>)
-            }
-          </>
-           : <></>}
-*/
 
 const Home: NextPage = () => {
   const [_favoritos, _setFavoritos] = useState([])
-
+  const {fuente} = useGlobalConfig();
   useEffect(()=>{
     _setFavoritos(getLocalStorage('favoritos', true, []))
   },[])
@@ -50,6 +40,15 @@ const Home: NextPage = () => {
           <Link href='login'>
             <a className='bg-red-3 btn p-2'>
               Iniciar Sesion
+            </a>
+          </Link>
+        </div>
+        <h2>¿POR QUE USAR ESTA APLICACIÓN?</h2>
+        <p>Si estas interesado en saber porqué deberias de usar HoraBondi, podes entrar en este enlace donde explicamos mas a detalle el porqué surgió la idea y que beneficios como efectos secundarios podemos tener todos.</p>
+        <div className='d-flex justify-content-center'>
+          <Link href='explicacion'>
+            <a className='bg-blue-3 btn p-2'>
+              Explicacion
             </a>
           </Link>
         </div>

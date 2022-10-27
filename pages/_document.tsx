@@ -31,7 +31,7 @@ export default function Document() {
             <link rel="mask-icon" href="/favicon.svg" sizes="any" type="image/svg+xml" color="#00838F" />
             <link rel="shortcut icon" href="/favicon.svg" />
         </Head>      
-        <body className={"body-scroll"}>
+        <body className="body-scroll">
           <Main />
           <NextScript />
         </body>

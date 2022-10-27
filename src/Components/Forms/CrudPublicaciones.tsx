@@ -77,7 +77,7 @@ export const CrudPublicaciones = () => {
             <input type="hidden" name="fecha" id='p_fecha' defaultValue={publicacion?.id}/>
             <input type="hidden" name="id" id='p_id' defaultValue={publicacion?.id}/>
             <div className='text-center'>
-                <button type="submit" className='btn p-2 blue-0 mt-4'>Guardar</button>
+                <button type="submit" className='btn p-2 bg-blue-3 mt-4'>Guardar</button>
             </div>
         </form>
         <div className='col-md-8 p-4'>

@@ -59,7 +59,7 @@ export const AltaUsuarioForm = () => {
         <label htmlFor='uc_image' className='m-2 mx-auto'>Foto: </label>
         <input type="file" name="image" id="uc_image" accept='image/jpg, image/jpeg' multiple={false} className='dashed p-3 w-100'/>
         
-        <button type="submit" className='btn p-2 mt-4 bg-blue-2 text-center'>Crear</button>
+        <button type="submit" className='btn p-2 mt-4 bg-blue-3 text-center'>Crear</button>
     </form>
   )
 }

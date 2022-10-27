@@ -27,7 +27,7 @@ export const PublicacionesForm = () => {
             <option value='tesa'>Tesa</option>
             <option value='gutierrez'>Gutierrez</option>
         </select>
-        <button type="submit" className='btn p-2 bg-blue-2 mt-4 text-center'>Crear</button>
+        <button type="submit" className='btn p-2 bg-blue-3 mt-4 text-center'>Crear</button>
     </form>
   )
 }

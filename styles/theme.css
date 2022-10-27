@@ -46,7 +46,9 @@
   border-radius: 1em;
   border: 5px solid #242424;
 }
-
+[data-theme='dark'] form input[type="text"]{
+  background-color: var(--dblue-0);
+}
 
 /*THEME LIGHT*/
 [data-theme='light'] #main{
@@ -83,9 +85,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#sidebar .active, #menu-top .active{
+#sidebar .active, #menu-top .active {
   background-color: var(--grey-0);
-  color: var(--bg-dark);
+  color: var(--grey-9);
 }
 [data-theme='light'] footer small , [data-theme='light'] .btn, [data-theme='light'] a{
   color: whitesmoke;
@@ -116,4 +118,7 @@
 }
 [data-theme='light'] article li a, [data-theme='light'] small a, [data-theme='light'] p a{
   color: var(--blue-8);
+}
+[data-theme='light'] form input[type="text"], [data-theme='light'] form input[type="email"],[data-theme='light'] form input[type="tel"], [data-theme='light'] form input[type="number"], [data-theme='light'] form input[type="password"]{
+  background-color: var(--lblue-0);
 }
