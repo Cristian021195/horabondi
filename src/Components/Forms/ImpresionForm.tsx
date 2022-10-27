@@ -146,5 +146,5 @@ export const ImpresionForm = ({route}:any) => {// console.log("Renderiza formula
       <strong>¡IMPORTANTE!</strong><p className='text-red-8'> Este funcion estará habilitada proximamente.</p>
     </div>
     </>
-  )
+  )//bg-teal-3
 }

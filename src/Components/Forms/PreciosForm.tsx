@@ -145,7 +145,7 @@ export const PreciosForm = ({route}:any) => { //console.log("Renderiza formulari
         <button type='button' className='btn mt-4 p-2 mx-auto' disabled={loading} onClick={()=>{
             localStorageRequest()
           }} style={{backgroundColor:'var(--yellow-8)'}}>{loading ? 'Actualizar' : 'Actualizado ✓'}</button>
-        <button type='submit' className='btn mt-4 p-2 mx-auto' style={{backgroundColor:'var(--teal-3)'}}>Buscar</button>
+        <button type='submit' className='btn mt-4 p-2 mx-auto bg-teal-3'>Buscar</button>
         <button type='button' className={minimize ? 'btn mt-4 p-2 mx-auto rotate-right' : 'btn mt-4 p-2 mx-auto rotate-left'} onClick={()=>setMinimize(!minimize)} style={{backgroundColor:'var(--yellow-8)'}}>&nbsp;▲&nbsp;</button>
       </div>
       <div className='d-flex justify-content-center mt-4'>
