@@ -34,6 +34,9 @@ const PreguntasFrecuentes: NextPage = () => {
             <Acordeon title='¿Se puede publicar contenido?'>
               <p>No, en principio y por ahora es solo para consumir información.</p>
             </Acordeon>
+            <Acordeon title='¿A que viene la app que estoy usando?'>
+              <p>Tenemos toda una explicación del &quot;porque&quot; de esta App. Si tenes tiempo informate aqui: <Link href='/explicacion'><a className='text-underline text-blue-6'>Explicacion</a></Link></p>
+            </Acordeon>
           </section>
         </div>
     </LayoutPrincipal>
