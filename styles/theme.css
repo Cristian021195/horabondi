@@ -99,6 +99,9 @@
 [data-theme='light'] .stripped tr:nth-child(even){
   background-color: var(--grey-1);
 }
+[data-theme='light'] .stripped tr:nth-child(even):hover{
+  background-color: var(--cyan-0);
+}
 [data-theme='light'] .sticky-header thead{
   position: sticky;
   top:0;

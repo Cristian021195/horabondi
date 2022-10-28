@@ -35,7 +35,7 @@ const Configuracion: NextPage = () => {
               <select name='notificaciones' id='notificaciones' className='s-shadow w-50' onChange={(e)=>{
                     setNotificaciones(e.target.value);
                     OneSignal.init({ appId: '9f895016-5666-4216-a052-13abc5bb0b18' });
-                    OneSignal.showCategorySlidedown();
+                    OneSignal.showNativePrompt();
                     OneSignal.setSubscription(e.target.value === 'true' ? true : false)
               }} defaultValue={notificaciones}>
                   <option value='true'>Activadas</option><option value='false'>Desctivadas</option>

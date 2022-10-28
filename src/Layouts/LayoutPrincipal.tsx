@@ -22,6 +22,7 @@ import { useSession } from '../Hooks';
 import { menu, menu_admin } from '../Utils';
 import { Footer, Navbar } from '../Components/Layout';
 //import { Header } from '../Components/Layout';
+import { useNetStat } from '../Hooks/useNetStat';
 
 interface Props {
     title:string,

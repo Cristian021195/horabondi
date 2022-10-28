@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { compareSync } from 'bcryptjs';
 import { OkPacket } from 'mysql2';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -15,7 +14,6 @@ interface IUserListQuery extends OkPacket {
 
 export default async function handler(req: NextApiRequest,  res: NextApiResponse<any>) {
     try {
-
         const data = await pool.query<IUserListQuery[]>("SELECT email, contra, name, image, tipo FROM usuarios WHERE email = ?",[req.body.email])
         if(data[0].length > 1){
             res.status(500).send({error:true, mensaje: 'Contacte con el administrador por mail duplicado.'})

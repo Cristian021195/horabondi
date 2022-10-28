@@ -53,6 +53,7 @@ body {
   -moz-user-select: none; /* firefox specific */
   -webkit-user-select: none; /* Chrome, Opera and Safari*/
   -ms-user-select: none; /* IE, ms-edge */
+  overscroll-behavior-y: contain;
 }
 
 table{
