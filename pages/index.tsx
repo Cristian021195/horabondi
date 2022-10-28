@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </article>
         <br />
         <h2>SIMPLE, LEGIBLE Y BONITA</h2>
-        <p>Horabondi es una aplicación web donde se puede consultar los horarios, precios y ultimas publicaciones de las empresas de colectivos mas usadas.</p>
+        <p>Horabondi es una aplicación web donde se puede consultar los horarios, precios y ultimas publicaciones de las empresas de colectivos más usadas.</p>
         <br />
         <h2>EFICIENTE Y FUNCIONAL</h2>
         <p>Al ser una aplicación web moderna (PWA), usamos todos los recursos que podemos para que sea instalable, y tenga funcionamiento sin acceso a datos, y a su vez con el menor consumo posible de los mismos.</p>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <div className='d-flex justify-content-center'>
           <Link href='login'>
             <a className='bg-red-3 btn p-2'>
-              Iniciar Sesion
+              Iniciar Sesión
             </a>
           </Link>
         </div>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         <div className='d-flex justify-content-center'>
           <Link href='explicacion'>
             <a className='bg-blue-3 btn p-2'>
-              Explicacion
+              Explicación
             </a>
           </Link>
         </div>
