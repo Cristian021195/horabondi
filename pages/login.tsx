@@ -14,12 +14,8 @@ import Image from 'next/image';
 
 const Login: NextPage = () => {
 
-  const {loginStatus, logIn, logOut} = useSession();
+  const {loginStatus, error, logIn, logOut, setError} = useSession();
   const {usuario, setUsuario} = useUserData();
-
-  /*useEffect(()=>{
-    console.log(loginStatus)
-  },[loginStatus])*/
 
   async function submitHandler(e:FormEvent<HTMLFormElement>){
     e.preventDefault();
@@ -34,7 +30,7 @@ const Login: NextPage = () => {
         //Cookies.set('email', data.user?.email+"");
         //data ? window.location.href = '/' : '';
     } catch (error:any) {
-        console.log(error?.message)
+      setError(error?.message)
     }
 }
 
@@ -70,6 +66,10 @@ const Login: NextPage = () => {
                 <small>¿Problemas para ingresar o registrarte? Envianos un mail: <a href="mailto:cristiangramajo015@gmail.com">cristiangramajo015@gmail.com</a></small><br/><br/>
                 <hr/>                        
                 <p>Inicio de sesión por defecto:</p>
+                {error ? <div className='bg-red-0 d-flex justify-content-between p-1 br-0'>
+                      <div>{error.message}</div>
+                      <button className='bg-red-1 p-1' onClick={()=>setError(false)}><b className='text-grey-8'>&nbsp;×&nbsp;</b></button>
+                    </div> : <></>}
                 <form className='row text-start' onSubmit={(e)=>{submitHandler(e)}}>
                     <label htmlFor='email' className='d-flex justify-content-center'>Email: </label>
                     <input type="email" name="email" id="email" className='bb-1 p-2 mb-4 br-0'/>

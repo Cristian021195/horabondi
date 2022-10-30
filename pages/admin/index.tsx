@@ -2,10 +2,9 @@ import type { NextPage } from 'next'
 import { FormEvent } from 'react';
 import { LayoutPrincipal } from '../../src/Layouts';
 import { ISSERVER, compartir } from '../../src/Utils';
-import {AltaEmpresaForm, AltaUsuarioForm, PublicacionesForm, CrudPublicaciones} from "../../src/Components/Forms"
+import {AltaEmpresaForm, AltaUsuarioForm, PublicacionesForm, CrudPublicaciones, LlavesForm} from "../../src/Components/Forms"
 
 const Admin: NextPage = () => {
-
     async function submitHandler(e:FormEvent<HTMLFormElement>){
         e.preventDefault();
     }
@@ -31,6 +30,10 @@ const Admin: NextPage = () => {
             <article className='col-12 p-4 m-4 b-shadow'>
                 <h2>Administrador de Publicaciones</h2>
                 <CrudPublicaciones/>
+            </article>
+            <article className='col-12 p-4 m-4 b-shadow'>
+                <h2>Cambio de llaves</h2>
+                <LlavesForm/>
             </article>
           </section>
         </div>

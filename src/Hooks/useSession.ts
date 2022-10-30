@@ -3,10 +3,11 @@ import { useEffect, useState } from "react"
 import { LOGIN_DEFAULT, CHECK_LOGIN } from "../Api";
 import { removeLocalStorageStatus, setLocalStorageStatusObject } from "../Helpers";
 import { IUserToken } from "../Interfaces";
-LOGIN_DEFAULT
+
 
 export const useSession = () => {
     const [loginStatus, setLoginStatus] = useState<boolean>(false);
+    const [error, setError] = useState<any>(false);
 
     const logIn = async (datos_obj:any) => {
         try {
@@ -17,6 +18,7 @@ export const useSession = () => {
             window.location.href = '/login';
         } catch (error) {
             setLoginStatus(false);
+            setError(error);
         }
         
     }
@@ -32,7 +34,7 @@ export const useSession = () => {
             const {data} = await CHECK_LOGIN.get('')
             data.error ? setLoginStatus(false) : setLoginStatus(true)
         } catch (error) {
-            setLoginStatus(false)
+            setLoginStatus(false);
         }
     }
 
@@ -41,10 +43,12 @@ export const useSession = () => {
     },[])
 
     return {
+        error,
         loginStatus,
         setLoginStatus,
         logIn,
         logOut,
-        checkSession
+        checkSession,
+        setError
     }
 }
