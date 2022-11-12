@@ -135,3 +135,9 @@
 .text-underline{
   text-decoration: underline;
 }
+.table-standard{
+  border-collapse: collapse;
+}
+.table-standard tr td,.table-standard tr th{
+  border: 1px solid #000;
+}

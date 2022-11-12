@@ -11,8 +11,11 @@ interface Props {
 }
 
 
+/*Los cambios que hicimos parten porque cargamos las planillas mas rapido con formato de texto hh:mm, solo habia que cambiar en moment utc a hh:mm y en los td de la tabla dinamica agregar ? amntes de replace*/
+
 export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) => {
-    let hora_utc:number = moment.utc(dataForm.hora,"hh:mm:ss").valueOf();
+    console.log(datosHorario)
+    let hora_utc:number = moment.utc(dataForm.hora,"hh:mm").valueOf();
     let origen_i:number; let origen_hs_utc:number[]; let origen_string:string[];
     let destino_i:number; let destino_hs_utc:number[]; let destino_string:string[];
     let total_size:number; let new_header:string[] | undefined; let new_body:any; let expreso_arr:any = [];
@@ -42,8 +45,8 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
             origen_string = datosHorario.data_body?.map((e,e_i)=>e[origen_i]) || [];
             destino_string = datosHorario.data_body?.map((e,e_i)=>e[destino_i]) || [];//hasta aqui ok dos arreglos de horarios en strings[]
 
-            origen_hs_utc =  datosHorario.data_body?.map((e,e_i)=>moment.utc(e[origen_i], "hh:mm:ss").valueOf()) || [];//hasta aqui ok conversion de ms array
-            destino_hs_utc = datosHorario.data_body?.map((e,e_i)=>moment.utc(e[destino_i], "hh:mm:ss").valueOf()) || [];
+            origen_hs_utc =  datosHorario.data_body?.map((e,e_i)=>moment.utc(e[origen_i], "hh:mm").valueOf()) || [];//hasta aqui ok conversion de ms array
+            destino_hs_utc = datosHorario.data_body?.map((e,e_i)=>moment.utc(e[destino_i], "hh:mm").valueOf()) || [];
 
             total_size = origen_string.length;
 
@@ -95,7 +98,7 @@ export const TableBody = ({data_body}:IDataHorario) => {
                     <tr key={tr_i}>
                         {
                             tr?.map((td:string, td_i:number)=>{
-                                return (<td key={td_i}>{td.replace(REGEX.SPACE_BLANK ," ").substring(0,5)}</td>)
+                                return (<td key={td_i}>{td?.replace(REGEX.SPACE_BLANK ," ").substring(0,5)}</td>)
                             })
                         }
                     </tr>)

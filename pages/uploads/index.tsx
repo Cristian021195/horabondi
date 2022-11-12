@@ -9,6 +9,7 @@ const Upload: NextPage = () => {
         <div className='col-12 col-md-6 col-lg-4 mx-auto pop-up'>
             <h1>Carga de Horarios y Listado de Precios</h1>
             <Card color='bg-red-2' link='/uploads/archivos' title='Horarios y Precios'></Card>
+            <Card color='bg-blue-2' link='/admin/tutorial' title='Tutorial de creacion de horarios'></Card>
         </div>
     </LayoutPrincipal>
   )

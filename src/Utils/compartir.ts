@@ -7,7 +7,7 @@ export function compartir(title='Titulo', text='Texto a compartir', url='/'):boo
             url
         }).then(()=>{
             return true;
-        }).catch((err)=>{
+        }).catch((err:any)=>{
             return false;
         })
       }else{
