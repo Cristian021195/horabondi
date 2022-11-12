@@ -18,7 +18,7 @@ interface ILlavesRows extends OkPacket{
 
 async function processMyArray (body:ILlavesArchivo) {
     const result:string[] = [];
-    for(const archivo of body.archivos){ //x is a bad name by the way
+    for(const archivo of body?.archivos){ //x is a bad name by the way
       const data = await myAsyncFunction(archivo, body);
       result.push(data);
     }
@@ -74,8 +74,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const body:ILlavesArchivo = req.body;
     let llaves_desactualizadas:string[] = [];
 
+    
+
     try {
-        if(body.archivos.length > 0){
+        let llaves_en_server = await sinArchivos(body);
+        if(body.archivos.length == llaves_en_server.length){
+            processMyArray(body).then(data=>{
+                llaves_desactualizadas = data;
+                if(Array.isArray(llaves_desactualizadas)){
+                    if(llaves_desactualizadas.length > 0){
+                        res.send({error: false, mensaje: "Se encontraron llaves desactualizadas", outdated: llaves_desactualizadas})
+                    }else{
+                        res.send({error: false, mensaje: "Todas las llaves estan actualizadas", outdated: llaves_desactualizadas})
+                    }
+                }else{
+                    res.status(500).send({error:true, mensaje:"error de respuesta del servidor, la variable no es array"})            
+                }
+            })
+        }else{
+            sinArchivos(body).then(data=>{
+                res.send({error: false, mensaje: "Se encontraron llaves desactualizadas", outdated: data})
+            })
+        }
+
+
+        /*if(body.archivos.length > 0){
             processMyArray(body).then(data=>{
                 llaves_desactualizadas = data;
                 if(Array.isArray(llaves_desactualizadas)){
@@ -93,7 +116,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 res.send({error: false, mensaje: "Se encontraron llaves desactualizadas", outdated: data})
             })
             //res.send({error: false, mensaje: "Se encontraron llaves desactualizadas", outdated: sinArchivos(body.empresa)})
-        }
+        }*/
     } catch (error) {
         res.status(500).send({error:true, mensaje:error})
     }
