@@ -18,7 +18,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
     let origen_i:number; let origen_hs_utc:number[]; let origen_string:string[];
     let destino_i:number; let destino_hs_utc:number[]; let destino_string:string[];
     let total_size:number; let new_header:string[] | undefined; let new_body:any; let expreso_arr:any = [];
-    let indices:number[] = [];
+    let indices:number[] = []; let file_size = datosHorario.data_body![0].length;
 
     if(datosHorario === null){
         return (<>
@@ -37,7 +37,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
             new_body = datosHorario?.data_body;
             new_body = filtrarPorTipo(dataForm, new_body);
         }else{
-
+            
             origen_i = datosHorario.data_header?.findIndex((e)=>e===dataForm.origen) || 0;
             destino_i = datosHorario.data_header?.findIndex((e)=>e===dataForm.destino) || 0;
 
@@ -49,7 +49,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
 
             total_size = origen_string.length;
 
-            datosHorario.data_body?.forEach((db:string[],db_i:number)=>expreso_arr.push(db[total_size-1]))
+            datosHorario.data_body?.forEach((db:string[],db_i:number)=>expreso_arr.push(db[file_size-1]))
             
             let cut_size = origen_hs_utc.findIndex((ohs, ohs_i)=>ohs>=hora_utc);
             let origen_string_cut = origen_string.slice(origen_hs_utc.findIndex((ohs, ohs_i)=>ohs>=hora_utc));
@@ -61,7 +61,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
             if(dataForm.sentido_string === 'ns' || dataForm.sentido_string === 'oe'){
                 destino_string_cut.forEach((ha,hai)=>{
                     if(ha.length > 1){
-                        indices.push(hai);
+                        indices.push(hai); 
                     }
                 })
             }else if(dataForm.sentido_string === 'sn' || dataForm.sentido_string === 'eo'){
@@ -78,7 +78,9 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
             })
             new_header = [dataForm.origen, dataForm.destino, "expreso"]?.map(nh=>nh.toUpperCase());
             new_body = filtrarPorTipo(dataForm, new_body);
+            //console.log(expreso_arr)
         }
+        
         
         return (<table className={styleClass.join(' ')}>
                     <TableHeader data_header={new_header}></TableHeader>
