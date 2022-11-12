@@ -14,7 +14,6 @@ interface Props {
 /*Los cambios que hicimos parten porque cargamos las planillas mas rapido con formato de texto hh:mm, solo habia que cambiar en moment utc a hh:mm y en los td de la tabla dinamica agregar ? amntes de replace*/
 
 export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) => {
-    console.log(datosHorario)
     let hora_utc:number = moment.utc(dataForm.hora,"hh:mm").valueOf();
     let origen_i:number; let origen_hs_utc:number[]; let origen_string:string[];
     let destino_i:number; let destino_hs_utc:number[]; let destino_string:string[];
