@@ -8,7 +8,9 @@ import { REGEX, ciudades_horarios, createLocalStorage, getLocalStorage } from '.
 import {IDataHorario, IHorariosStorageData, ILlaveResponse, ILlaveToLocal } from '../../Interfaces';
 import { UPDATES, HORARIOS, LLAVES } from '../../Api';
 import {useViajeData} from "../../Hooks"
+import {now} from 'moment';
 //import { useQuery } from 'react-query';
+import { obtenerDiasHabiles } from '../../Helpers/obtenerHabiles';
 
 
 
@@ -80,10 +82,10 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
     let sentido_string:string | undefined = sentido?.at(-1)
     
     setDataForm({hora:hora+":00", origen, destino, tipo, sentido_string})
-    
+    createLocalStorage('last-'+empresa, last, true);
     try {      
       setDatosHorario(JSON.parse(localStorage.getItem(sentido.join('-')) || "null"));
-      setLast({origen, destino}); createLocalStorage('last-'+empresa, last, true);
+      setLast({origen, destino});
     } catch (err) {
       setError(err);
     }
@@ -104,7 +106,12 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
     localStorageRequest()
     setKeys(JSON.parse(localStorage.getItem(`${empresa}-horarios-keys`) || "[]" ))
     setLast(getLocalStorage('last-'+empresa, true, {origen:'', destino:''}))
+    
   },[empresa, localStorageRequest, setKeys])
+
+  /*useEffect(()=>{
+    empresa && createLocalStorage('last-'+empresa, last, true);
+  },[last, empresa])*/
 
   return (
     <>
@@ -124,7 +131,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
       
       <div className={minimize ? 'row d-none' : 'row d-flex'}>
         <label className='col-6 text-center p-2' htmlFor="dias">Dias:
-        <select name="dias" id="dias" className='s-shadow'>
+        <select name="dias" id="dias" className='s-shadow' defaultValue={obtenerDiasHabiles()}>
           <option value="habiles">Habiles</option>
           <option value="sabados">Sabados</option>
           <option value="domingos">Domingos y Feriados</option>
@@ -138,7 +145,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
         </select>
         </label>
         <label className='col-6 p-2 text-center' htmlFor="origen">Origen: 
-        <select name="origen" id="origen" className='s-shadow' value={last?.origen} onChange={()=>{}}>
+        <select name="origen" id="origen" className='s-shadow' value={last?.origen} onChange={(e)=>{setLast({...last, origen:e.target.value})}}>
           <optgroup>
             <option value={Object.keys(sentidoDefault)[0]}>{Object.values(sentidoDefault)[0]}</option>
             <option value={Object.keys(sentidoDefault)[1]}>{Object.values(sentidoDefault)[1]}</option>
@@ -151,7 +158,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
         </select>
         </label>
         <label className='col-6 p-2 text-center' htmlFor="destino">Destino: 
-        <select name="destino" id="destino" className='s-shadow' value={last?.destino} onChange={()=>{}}>
+        <select name="destino" id="destino" className='s-shadow' value={last?.destino} onChange={(e)=>{setLast({...last, destino:e.target.value})}}>
           <optgroup>
             {opciones.map((op, op_i)=>{
               return <option key={op_i} value={op}>{op}</option>
