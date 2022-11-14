@@ -18,7 +18,7 @@ export function listarRutas(route_text:string):Array<string>{
         return ["38","301"]
       }
       case switch_empresas.GUTIERREZ:{
-        return ["329","65", "piedragrande", "calera", "agudos", "301"]
+        return ["65", "piedragrande", "calera", "agudos", "301"]//quitamos 329
       }  
       default:{
         return ['ruta']

@@ -53,17 +53,6 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
                 ]
             },
             {
-                tabla: 'gutierrez-329',
-                ruta:329,
-                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
-                ciudades: [
-                    'monteagudo',
-                    'medinas',
-                    'trinidad',
-                    'concepcion'
-                ]
-            },
-            {
                 tabla: 'gutierrez-65',
                 ruta:65,
                 sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
@@ -89,7 +78,7 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
             {
                 tabla: 'gutierrez-agudos',
                 ruta:'agudos',
-                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                sentido:{ns: 'Norte - Sur', sn: 'Sur - Norte'},
                 ciudades: [
                     'agudos',
                     'medinas',
@@ -99,7 +88,7 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
             {
                 tabla: 'gutierrez-calera',
                 ruta:'calera',
-                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                sentido:{ns: 'Norte - Sur', sn: 'Sur - Norte'},
                 ciudades: [
                     'terminal',
                     'concepcion',
@@ -110,7 +99,7 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
             {
                 tabla: 'gutierrez-piedragrande',
                 ruta:'piedragrande',
-                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                sentido:{ns: 'Norte - Sur', sn: 'Sur - Norte'},
                 ciudades: [
                     'terminal',
                     'concepcion',
