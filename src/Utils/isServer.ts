@@ -16,7 +16,7 @@ export function createLocalStorage (name:string, init:any ,parse:boolean){
 
 export function getLocalStorage (name:string, parse:boolean, default_value:any){
     if(!ISSERVER){
-        if(localStorage.getItem(name)){
+        if(localStorage.getItem(name) && localStorage.getItem(name) !== 'undefined'){
             if(parse){
                 return JSON.parse(localStorage.getItem(name)!);
             }else{

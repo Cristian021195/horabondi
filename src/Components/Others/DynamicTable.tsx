@@ -18,7 +18,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
     let origen_i:number; let origen_hs_utc:number[]; let origen_string:string[];
     let destino_i:number; let destino_hs_utc:number[]; let destino_string:string[];
     let total_size:number; let new_header:string[] | undefined; let new_body:any; let expreso_arr:any = [];
-    let indices:number[] = []; let file_size = datosHorario.data_body![0].length;
+    let indices:number[] = []; let file_size = datosHorario?.data_body![0].length;
 
     if(datosHorario === null){
         return (<>

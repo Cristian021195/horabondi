@@ -4,7 +4,7 @@ import axios from 'axios';
 import { obtenerSentidoDefault, listarRutas, listarCiudades, crearNombreHorario } from '../../Helpers';
 import { DynamicTable, Toast, Loader} from '../Others';
 import {InputTime} from "../Input"
-import { REGEX, ciudades_horarios } from '../../Utils';
+import { REGEX, ciudades_horarios, createLocalStorage, getLocalStorage } from '../../Utils';
 import {IDataHorario, IHorariosStorageData, ILlaveResponse, ILlaveToLocal } from '../../Interfaces';
 import { UPDATES, HORARIOS, LLAVES } from '../../Api';
 import {useViajeData} from "../../Hooks"
@@ -21,6 +21,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
   const [datosHorario, setDatosHorario] = useState<IDataHorario>({data_header:[""], data_body:[[]], data_validity:''})
   const [loading, setLoading] = useState<boolean>(false)
   const [toastMessage, setToastMessage] = useState<string>("");
+  const [last, setLast] = useState<any>({origen:'', destino:''})
 
   const localStorageRequest = useCallback(
     async()=>{
@@ -81,7 +82,8 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
     setDataForm({hora:hora+":00", origen, destino, tipo, sentido_string})
     
     try {      
-      setDatosHorario(JSON.parse(localStorage.getItem(sentido.join('-')) || "null"))
+      setDatosHorario(JSON.parse(localStorage.getItem(sentido.join('-')) || "null"));
+      setLast({origen, destino}); createLocalStorage('last-'+empresa, last, true);
     } catch (err) {
       setError(err);
     }
@@ -101,6 +103,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
   useEffect(()=>{
     localStorageRequest()
     setKeys(JSON.parse(localStorage.getItem(`${empresa}-horarios-keys`) || "[]" ))
+    setLast(getLocalStorage('last-'+empresa, true, {origen:'', destino:''}))
   },[empresa, localStorageRequest, setKeys])
 
   return (
@@ -135,7 +138,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
         </select>
         </label>
         <label className='col-6 p-2 text-center' htmlFor="origen">Origen: 
-        <select name="origen" id="origen" className='s-shadow' defaultValue="origen">
+        <select name="origen" id="origen" className='s-shadow' value={last?.origen} onChange={()=>{}}>
           <optgroup>
             <option value={Object.keys(sentidoDefault)[0]}>{Object.values(sentidoDefault)[0]}</option>
             <option value={Object.keys(sentidoDefault)[1]}>{Object.values(sentidoDefault)[1]}</option>
@@ -148,7 +151,7 @@ export const HorarioForm = ({route}:any) => {// console.log("Renderiza formulari
         </select>
         </label>
         <label className='col-6 p-2 text-center' htmlFor="destino">Destino: 
-        <select name="destino" id="destino" className='s-shadow' defaultValue="destino">
+        <select name="destino" id="destino" className='s-shadow' value={last?.destino} onChange={()=>{}}>
           <optgroup>
             {opciones.map((op, op_i)=>{
               return <option key={op_i} value={op}>{op}</option>

@@ -42,9 +42,11 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
                 ciudades: [
                     'tucuman',
                     'famailla',
+                    'rio colorado',
                     'monteros',
                     'concepcion',
                     'aguilares',
+                    'santa ana',
                     'alberdi',
                     'la cocha',
                     'los pizarros',
@@ -59,6 +61,62 @@ export const ciudades_horarios:IOpcionesCiudadesHorario[] = [
                     'medinas',
                     'trinidad',
                     'concepcion'
+                ]
+            },
+            {
+                tabla: 'gutierrez-65',
+                ruta:65,
+                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                ciudades: [
+                    'monteagudo',
+                    'medinas',
+                    'trinidad',
+                    'concepcion',
+                    'terminal'
+                ]
+            },
+            {
+                tabla: 'gutierrez-301',
+                ruta:301,
+                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                ciudades: [
+                    'concepcion',
+                    'aguilares',
+                    'los sarmientos',
+                    'monte bello',
+                ]
+            },
+            {
+                tabla: 'gutierrez-agudos',
+                ruta:'agudos',
+                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                ciudades: [
+                    'agudos',
+                    'medinas',
+                    'aguilares',
+                ]
+            },
+            {
+                tabla: 'gutierrez-calera',
+                ruta:'calera',
+                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                ciudades: [
+                    'terminal',
+                    'concepcion',
+                    'alto verde',
+                    'la calera'
+                ]
+            },
+            {
+                tabla: 'gutierrez-piedragrande',
+                ruta:'piedragrande',
+                sentido:{eo: 'Este - Oeste', oe: 'Oeste - Este'},
+                ciudades: [
+                    'terminal',
+                    'concepcion',
+                    'el molino',
+                    'alpachiri',
+                    'piedra grande'
                 ]
             }
 ]

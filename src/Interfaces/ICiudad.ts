@@ -1,6 +1,6 @@
 export interface IOpcionesCiudadesHorario {
     tabla:string,
-    ruta:number,
+    ruta:number | string,
     ciudades: string[],
     sentido: Object,
 }
