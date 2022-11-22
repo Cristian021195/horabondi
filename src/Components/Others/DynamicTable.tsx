@@ -27,6 +27,7 @@ export const DynamicTable = ({datosHorario, dataForm, styleClass=['']}:Props) =>
                         <li><i>El horario no está disponible por parte de la empresa</i></li>
                         <li><i>Verifique la hora</i></li>
                         <li><i>Verifique que está en la empresa correcta</i></li>
+                        <li><i>Tener en cuenta que los colectivos de refuerzos no estan incluidos, ya que no son frecuentes</i></li>
                     </ul>
                     
                 </>)

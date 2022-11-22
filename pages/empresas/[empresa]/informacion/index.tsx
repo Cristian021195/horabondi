@@ -12,8 +12,10 @@ const Informacion = () => {
   return (
     <LayoutPrincipal title={router.query.empresa+" informacion"} strech='no-strech'>
         <EmpresasLayout>
-          <TitularSeccion titulo='informacion y horarios' empresa={router.query.empresa+""}/>
-          <EmpresaNavbar></EmpresaNavbar>
+          <div className='responsive-seccion'>
+            <TitularSeccion titulo='Informacion' empresa={router.query.empresa+""}/>
+            <EmpresaNavbar></EmpresaNavbar>
+          </div>
           <div className='scroll-all vh-100 pop-up'>
             <section className='p-2'>
               <article>

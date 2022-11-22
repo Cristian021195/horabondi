@@ -50,6 +50,9 @@
   top: 0.5em;
   right: 0.5em;
 }
+.bubble:active{
+  outline: none;
+}
 .v-align-middle{
   display: inline-block;
   vertical-align: top;

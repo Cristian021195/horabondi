@@ -55,6 +55,10 @@ body {
   -ms-user-select: none; /* IE, ms-edge */
   overscroll-behavior-y: contain;
 }
+html{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
 
 table{
     border-collapse: collapse;

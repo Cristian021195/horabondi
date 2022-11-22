@@ -10,8 +10,10 @@ const Horarios = () => {
   return (
     <LayoutPrincipal title={router.query.empresa+" horarios"} strech='no-strech'>
       <EmpresasLayout>
-        <TitularSeccion titulo='horarios' empresa={router.query.empresa+""}/>
-        <EmpresaNavbar></EmpresaNavbar>
+        <div className='responsive-seccion'>
+          <TitularSeccion titulo='horarios' empresa={router.query.empresa+""}/>
+          <EmpresaNavbar></EmpresaNavbar>
+        </div>
         <div className='pop-up'>
           <HorarioForm route={router.asPath}></HorarioForm>
         </div>

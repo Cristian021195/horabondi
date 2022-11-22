@@ -10,8 +10,10 @@ const MenuId = () => {
   return (
     <LayoutPrincipal title={router.query.empresa+" precios"} strech='no-strech'>
       <EmpresasLayout>
-        <TitularSeccion titulo='precios' empresa={router.query.empresa+""}/>
-        <EmpresaNavbar></EmpresaNavbar>
+        <div className='responsive-seccion'>
+          <TitularSeccion titulo='precios' empresa={router.query.empresa+""}/>
+          <EmpresaNavbar></EmpresaNavbar>
+        </div>
         <div className='pop-up'>
           <PreciosForm route={router.asPath}></PreciosForm>
         </div>

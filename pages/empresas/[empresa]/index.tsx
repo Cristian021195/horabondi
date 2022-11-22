@@ -21,8 +21,10 @@ const Empresa: NextPage<IEmpresa> = ({empresa}) => {
     <>
       <LayoutPrincipal title={empresa} strech='no-strech'>
         <EmpresasLayout>
-          <TitularSeccion titulo="Bienvenido a" empresa={empresa+""}/>
-          <EmpresaNavbar bg_color='--cyan-8'/>
+          <div className='responsive-seccion'>
+            <TitularSeccion titulo="Bienvenido a" empresa={empresa+""}/>
+            <EmpresaNavbar bg_color='--cyan-8'/>
+          </div>
         </EmpresasLayout>
       </LayoutPrincipal>
     </>

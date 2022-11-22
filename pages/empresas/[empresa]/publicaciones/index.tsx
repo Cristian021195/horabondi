@@ -19,8 +19,10 @@ const Publicaciones = () => {
   return (
     <LayoutPrincipal title={router.query.empresa+" publicaciones"} strech='no-strech'>
       <EmpresasLayout>
-        <TitularSeccion titulo="publicaciones" empresa={router.query.empresa+""}/>
-        <EmpresaNavbar></EmpresaNavbar>
+        <div className='responsive-seccion'>
+          <TitularSeccion titulo="publicaciones" empresa={router.query.empresa+""}/>
+          <EmpresaNavbar></EmpresaNavbar>
+        </div>
         <div className='scroll-all vh-100 pop-up'>
           <section className='p-4 row d-flex justify-content-evenly'>
             {

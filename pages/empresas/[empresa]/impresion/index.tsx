@@ -10,8 +10,10 @@ const Impresion = () => {
   return (
     <LayoutPrincipal title={router.query.empresa+" impresion"} strech='no-strech'>
       <EmpresasLayout>
-        <TitularSeccion titulo='impresion' empresa={router.query.empresa+""}/>
-        <EmpresaNavbar></EmpresaNavbar>
+        <div className='responsive-seccion'>
+          <TitularSeccion titulo='impresion' empresa={router.query.empresa+""}/>
+          <EmpresaNavbar></EmpresaNavbar>
+        </div>
         <div className='pop-up'>
           <ImpresionForm route={router.asPath}/>
         </div>
